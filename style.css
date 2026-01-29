@@ -24,7 +24,7 @@ section {
     display: flex;
     background-color: rgba(36, 32, 32, 0.582);
     top: 20%;
-    height: 20%;
+    height: 15%;
     width: 33%;
     justify-content: center;
 }
@@ -43,7 +43,8 @@ section {
     background-color: lightgray;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    /* justify-content: center; */
+    padding-top: 7vh;
 }
 
 #rightTop {
@@ -63,6 +64,7 @@ form {
 h2 {
     margin-top: 2vh;
     flex: 0 0 100%;
+    margin-bottom: 0;
 }
 
 label {
@@ -82,11 +84,17 @@ textarea {
     box-sizing: border-box;
 }
 
+input {
+    width: 70%;
+    padding-left: .3em;
+}
+
 #formsheet {
     background-color: white;
     display: flex;
     flex-wrap: wrap;
-    gap: 2em;
+    gap: 3em;
+    column-gap: 0;
     padding-left: 2em;
     padding-bottom: 4vh;
 }
@@ -97,11 +105,26 @@ textarea {
     width: 40%;
 }
 
+#password:invalid,
+#conPassword:invalid {
+    border-color: red;
+}
+
+input:focus {
+    border: none;
+    border: 3px solid blue;
+}
+
 button {
     padding: 1em;
     margin-left: 2em;
     margin-top: 2vh;
     width: 20%;
     background: #596D48;
-    border-radius: 2em;
+    border-radius: 1em;
+}
+
+form p {
+    margin-left: 1.5em;
+    font-size: 1.2em;
 }
